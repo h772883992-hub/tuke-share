@@ -479,10 +479,10 @@ body {
           <tr>
             <th>平台</th>
             <th class="num">发布量</th>
-            <th class="num">播放/阅读</th>
             <th class="num">互动量</th>
+            <th class="num">阅读数</th>
             <th class="num">线索数</th>
-            <th class="num">转化率</th>
+            <th class="num">转销售</th>
             <th class="num">环比变化</th>
           </tr>
         </thead>
@@ -1793,7 +1793,7 @@ body {
     const series = aggregateSeries(periodType, 8);
     const summaries = getPeriodSummaries(key, periodType);
 
-    const sheet1Rows = [['平台', '发布', '互动', '播放阅读', '线索', '转化']];
+    const sheet1Rows = [['平台', '发布', '互动', '阅读', '线索', '转销售']];
     for (const p of plats) {
       const bp = bucket.byPlatform[p.code] || {};
       sheet1Rows.push([p.name || p.code, bp.publish || 0, bp.interaction || 0, bp.readPlay || 0, bp.lead || 0, bp.transfer || 0]);
